@@ -3,9 +3,11 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Services from "./pages/Services.jsx";
+import Footer from "./pages/Footer.jsx";
 
 export default function App() {
   return (
+     <>
     <Router>
       <nav>
         <NavLink to="/" end    className={({ isActive }) => isActive ? "active" : ""}> Home  </NavLink> 
@@ -22,5 +24,11 @@ export default function App() {
         <Route path="*" element={<main style={{ padding: '1rem' }}><h1>404 - Not Found</h1></main>} />
       </Routes>
     </Router>
+    
+   
+    <Footer/>
+
+    </>
+
   );
 }
